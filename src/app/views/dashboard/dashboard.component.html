@@ -1,0 +1,8 @@
+<section class="px-10 py-5 mx-auto grid grid-cols-12 gap-5 auto-rows-min">
+  <ce-info-card class="col-span-4" title="Total Ventas" [content]="'$ ' + totalPedidos.toString()" />
+  <ce-info-card class="col-span-4" title="Productos Vendidos" [content]="totalProductos.toString()" />
+  <ce-info-card class="col-span-4" title="Nuevos Clientes" [content]="nuevosClientes.toString()" />
+  <ce-graph-wrapper class="col-span-6" title="Gráfico de Ventas por Mes">
+    <div echarts [options]="options" [merge]="updateOptions"></div>
+  </ce-graph-wrapper>
+</section>

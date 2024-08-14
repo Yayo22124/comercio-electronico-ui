@@ -1,0 +1,28 @@
+@if (product) {
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ product.Nombre }}</mat-card-title>
+    <mat-card-subtitle class="ml-auto text-center my-2">{{
+      product.Precio_Actual | currency
+    }}</mat-card-subtitle>
+  </mat-card-header>
+  <img
+    class="object-cover max-h-80"
+    mat-card-image
+    src="https://random-image-pepebigotes.vercel.app/api/random-image"
+    alt="{{ product.Nombre }}"
+  />
+  <mat-card-content class="my-3">
+    <p>{{ product.Descripcion }}</p>
+  </mat-card-content>
+  <mat-card-actions class="flex justify-end">
+    <button mat-flat-button color="primary" class="flex gap-3 justify-center items-center">
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Example home icon"
+        fontIcon="shopping_cart"
+      />Comprar
+    </button>
+  </mat-card-actions>
+</mat-card>
+}

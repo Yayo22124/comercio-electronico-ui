@@ -1,0 +1,16 @@
+<mat-toolbar class="text-white">
+  <mat-toolbar-row class="bg-zinc-800 flex justify-between items-center">
+    <h1 routerLink="/" class="cursor-pointer">Aid Day Dashboard</h1>
+    <h2>Fecha {{ today | date : "dd/MM/yy" }}</h2>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="bg-zinc-700 flex justify-center">
+    <ul class="flex gap-5">
+      <button mat-flat-button routerLink="/home" routerLinkActive="bg-slate-100/10">
+        Inicio
+      </button>
+      <button mat-flat-button  routerLinkActive="bg-slate-100/10">Ventas</button>
+      <button mat-flat-button routerLinkActive="bg-slate-100/10">Inventario</button>
+      <button mat-flat-button routerLinkActive="bg-slate-100/10">Finanzas</button>
+    </ul>
+  </mat-toolbar-row>
+</mat-toolbar>
